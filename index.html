@@ -12,10 +12,10 @@
         .then(response => response.json())
         .then(data => {
           const list = document.getElementById("ideas-list");
-          data.sort((a, b) => b.votes - a.votes);
+          data.sort((a, b) => b.Votes - a.Votes);
           data.forEach(idea => {
             const li = document.createElement("li");
-            li.textContent = `${idea.Title} - ${idea.Votes} votes`;
+            li.textContent = `${idea.Title} - ${idea.Votes} Votes`;
             list.appendChild(li);
           });
         });
